@@ -1,0 +1,21 @@
+function plusMinus(arr) {
+  const n = arr.length;
+  let positiveCount = 0;
+  let negativeCount = 0;
+  let zeroCount = 0;
+  for (let i = 0; i < n; i++) {  // Para contar os que são positivos, os que são negativos e os que são 0
+      if (arr[i] > 0) {
+          positiveCount++;
+      } else if (arr[i] < 0) {
+          negativeCount++;
+      } else {
+          zeroCount++;
+      }
+    }
+    const positiveRatio = (positiveCount / n).toFixed(6);  // Para calcular o raio
+    const negativeRatio = (negativeCount / n).toFixed(6);
+    const zeroRatio = (zeroCount / n).toFixed(6);
+
+    console.log(positiveRatio);
+    console.log(negativeRatio);
+    console.log(zeroRatio);
